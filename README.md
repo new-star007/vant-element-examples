@@ -8,7 +8,7 @@ vant-element 组件的演示项目，基于 Vue CLI (Vue 2)。
 # 安装依赖
 npm install
 
-# 本地开发
+# 本地开发（自动使用本地 vant-element）
 npm run dev
 
 # 构建
