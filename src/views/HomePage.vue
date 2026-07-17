@@ -2,7 +2,7 @@
   <div class="home">
     <div class="home-header">
       <div class="home-header__logo">
-        <img class="home-header__logo-img" src="/logo.png" alt="Vant Element" />
+        <img class="home-header__logo-img" :src="`${baseUrl}logo.png`" alt="Vant Element" />
       </div>
       <div class="home-header__title">Vant Element</div>
       <div class="home-header__desc">基于 Vant 的 Element 风格组件库</div>
@@ -58,6 +58,11 @@ const COLORS = [
 export default {
   name: 'HomePage',
   components: { [Icon.name]: Icon },
+  computed: {
+    baseUrl() {
+      return process.env.BASE_URL || '/'
+    }
+  },
   data() {
     return {
       categories: [
