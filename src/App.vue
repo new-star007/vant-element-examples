@@ -6,7 +6,30 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    if (window.parent !== window.self) {
+      window.addEventListener('message', this.handleMessage)
+    }
+  },
+  watch: {
+    $route(to) {
+      if (window.parent === window.self) return
+      window.parent.postMessage({ type: 'navigate', path: to.fullPath }, '*')
+    }
+  },
+  methods: {
+    handleMessage(ev) {
+      if (ev.data?.type !== 'navigate') return
+      const path = ev.data.path
+      if (path && path !== this.$route.fullPath) {
+        this.$router.push(path).catch(function () {})
+      }
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('message', this.handleMessage)
+  }
 }
 </script>
 

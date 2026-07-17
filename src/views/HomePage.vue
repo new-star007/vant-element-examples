@@ -22,10 +22,10 @@
               <van-icon :name="item.icon" />
             </div>
             <div class="home-grid-item__info">
-              <span class="home-grid-item__label">{{ item.name }}</span>
-              <span v-if="item.desc" class="home-grid-item__desc">{{ item.desc }}</span>
+              <span class="home-grid-item__label">{{ item.zhName }}</span>
+              <span class="home-grid-item__desc">{{ item.name }}</span>
             </div>
-            <span v-if="item.isNew" class="home-grid-item__badge">NEW</span>
+
           </div>
         </div>
       </div>
@@ -64,91 +64,90 @@ export default {
         {
           name: '基础组件',
           children: [
-            { name: 'Button', icon: 'gem-o', color: COLORS[0], path: '/button' },
-            { name: 'Icon', icon: 'photo-o', color: COLORS[1], path: '/icon' },
-            { name: 'Image', icon: 'photo', color: COLORS[2], path: '/image' },
-            { name: 'Layout', icon: 'bar-chart-o', color: COLORS[3], path: '/layout' },
-            { name: 'Card', icon: 'stop', color: COLORS[4], path: '/card' },
-            { name: 'Link', icon: 'link-o', color: COLORS[5], path: '/link', isNew: true },
-            { name: 'Spinner', icon: 'replay', color: COLORS[6], path: '/spinner', isNew: true }
+            { name: 'Button', zhName: '按钮', icon: 'gem-o', color: COLORS[0], path: '/button' },
+            { name: 'Icon', zhName: '图标', icon: 'photo-o', color: COLORS[1], path: '/icon' },
+            { name: 'Image', zhName: '图片', icon: 'photo', color: COLORS[2], path: '/image' },
+            { name: 'Layout', zhName: '布局', icon: 'bar-chart-o', color: COLORS[3], path: '/layout' },
+            { name: 'Card', zhName: '卡片', icon: 'stop', color: COLORS[4], path: '/card' },
+            { name: 'Link', zhName: '链接', icon: 'link-o', color: COLORS[5], path: '/link' },
+            { name: 'Spinner', zhName: '加载', icon: 'replay', color: COLORS[6], path: '/spinner' }
           ]
         },
         {
           name: '表单组件',
           children: [
-            { name: 'Cascader', icon: 'label-o', color: COLORS[5], path: '/cascader' },
-            { name: 'Checkbox', icon: 'checked', color: COLORS[6], path: '/checkbox' },
-            { name: 'DatePicker', icon: 'calendar-o', color: COLORS[7], path: '/date-picker' },
-            { name: 'Form', icon: 'edit', color: COLORS[8], path: '/form' },
-            { name: 'Input', icon: 'smile-o', color: COLORS[9], path: '/input' },
-            { name: 'InputNumber', icon: 'sort', color: COLORS[10], path: '/input-number' },
-            { name: 'Radio', icon: 'circle', color: COLORS[10], path: '/radio' },
-            { name: 'Rate', icon: 'star-o', color: COLORS[11], path: '/rate' },
-            { name: 'Select', icon: 'down', color: COLORS[12], path: '/select' },
-            { name: 'Slider', icon: 'more', color: COLORS[13], path: '/slider' },
-            { name: 'Switch', icon: 'exchange', color: COLORS[14], path: '/switch' },
-            { name: 'TimePicker', icon: 'clock-o', color: COLORS[15], path: '/time-picker' },
-            { name: 'Upload', icon: 'upload', color: COLORS[0], path: '/upload' },
-            { name: 'TimeSelect', icon: 'clock-o', color: COLORS[4], path: '/time-select', isNew: true },
-            { name: 'Autocomplete', icon: 'search', color: COLORS[6], path: '/autocomplete', isNew: true }
+            { name: 'Cascader', zhName: '级联选择', icon: 'label-o', color: COLORS[5], path: '/cascader' },
+            { name: 'Checkbox', zhName: '复选框', icon: 'checked', color: COLORS[6], path: '/checkbox' },
+            { name: 'DatePicker', zhName: '日期选择', icon: 'calendar-o', color: COLORS[7], path: '/date-picker' },
+            { name: 'Form', zhName: '表单', icon: 'edit', color: COLORS[8], path: '/form' },
+            { name: 'Input', zhName: '输入框', icon: 'smile-o', color: COLORS[9], path: '/input' },
+            { name: 'InputNumber', zhName: '数字输入', icon: 'sort', color: COLORS[10], path: '/input-number' },
+            { name: 'Radio', zhName: '单选框', icon: 'circle', color: COLORS[10], path: '/radio' },
+            { name: 'Rate', zhName: '评分', icon: 'star-o', color: COLORS[11], path: '/rate' },
+            { name: 'Select', zhName: '选择器', icon: 'down', color: COLORS[12], path: '/select' },
+            { name: 'Slider', zhName: '滑块', icon: 'more', color: COLORS[13], path: '/slider' },
+            { name: 'Switch', zhName: '开关', icon: 'exchange', color: COLORS[14], path: '/switch' },
+            { name: 'TimePicker', zhName: '时间选择', icon: 'clock-o', color: COLORS[15], path: '/time-picker' },
+            { name: 'Upload', zhName: '上传', icon: 'upload', color: COLORS[0], path: '/upload' },
+            { name: 'TimeSelect', zhName: '时间选择', icon: 'clock-o', color: COLORS[4], path: '/time-select' },
+            { name: 'Autocomplete', zhName: '自动完成', icon: 'search', color: COLORS[6], path: '/autocomplete' }
           ]
         },
         {
           name: '反馈组件',
           children: [
-            { name: 'Alert', icon: 'info-o', color: COLORS[1], path: '/alert' },
-            { name: 'Dialog', icon: 'chat-o', color: COLORS[2], path: '/dialog' },
-            { name: 'Loading', icon: 'replay', color: COLORS[3], path: '/loading' },
-            { name: 'Message', icon: 'chat-o', color: COLORS[4], path: '/message' },
-            { name: 'MessageBox', icon: 'question-o', color: COLORS[5], path: '/message-box' },
-            { name: 'Notification', icon: 'bell', color: COLORS[6], path: '/notification' },
-            { name: 'Popover', icon: 'more-o', color: COLORS[7], path: '/popover' },
-            { name: 'Progress', icon: 'chart-trending-o', color: COLORS[8], path: '/progress' },
-            { name: 'Tooltip', icon: 'info-o', color: COLORS[9], path: '/tooltip', isNew: true },
-            { name: 'Popconfirm', icon: 'question-o', color: COLORS[10], path: '/popconfirm', isNew: true },
-            { name: 'Drawer', icon: 'arrow-up', color: COLORS[11], path: '/drawer', isNew: true }
+            { name: 'Alert', zhName: '警告', icon: 'info-o', color: COLORS[1], path: '/alert' },
+            { name: 'Dialog', zhName: '对话框', icon: 'chat-o', color: COLORS[2], path: '/dialog' },
+            { name: 'Loading', zhName: '加载', icon: 'replay', color: COLORS[3], path: '/loading' },
+            { name: 'Message', zhName: '消息', icon: 'chat-o', color: COLORS[4], path: '/message' },
+            { name: 'MessageBox', zhName: '消息弹框', icon: 'question-o', color: COLORS[5], path: '/message-box' },
+            { name: 'Notification', zhName: '通知', icon: 'bell', color: COLORS[6], path: '/notification' },
+            { name: 'Popover', zhName: '气泡卡片', icon: 'more-o', color: COLORS[7], path: '/popover' },
+            { name: 'Progress', zhName: '进度条', icon: 'chart-trending-o', color: COLORS[8], path: '/progress' },
+            { name: 'Tooltip', zhName: '文字提示', icon: 'info-o', color: COLORS[9], path: '/tooltip' },
+            { name: 'Popconfirm', zhName: '气泡确认', icon: 'question-o', color: COLORS[10], path: '/popconfirm' },
+            { name: 'Drawer', zhName: '抽屉', icon: 'arrow-up', color: COLORS[11], path: '/drawer' }
           ]
         },
         {
           name: '展示组件',
           children: [
-            { name: 'Badge', icon: 'certificate', color: COLORS[9], path: '/badge' },
-            { name: 'Carousel', icon: 'photo-o', color: COLORS[10], path: '/carousel' },
-            { name: 'Collapse', icon: 'exchange', color: COLORS[11], path: '/collapse' },
-            { name: 'Descriptions', icon: 'description', color: COLORS[12], path: '/descriptions' },
-            { name: 'Divider', icon: 'minus', color: COLORS[13], path: '/divider' },
-            { name: 'Empty', icon: 'smile', color: COLORS[14], path: '/empty' },
-            { name: 'List', icon: 'bars', color: COLORS[15], path: '/list-demo' },
-            { name: 'Pagination', icon: 'more', color: COLORS[0], path: '/pagination' },
-            { name: 'Skeleton', icon: 'scan', color: COLORS[1], path: '/skeleton' },
-            { name: 'Table', icon: 'apps-o', color: COLORS[2], path: '/table' },
-            { name: 'Tag', icon: 'tag-o', color: COLORS[3], path: '/tag' },
-            { name: 'Calendar', icon: 'calendar-o', color: COLORS[5], path: '/calendar', isNew: true },
-
+            { name: 'Badge', zhName: '标记', icon: 'certificate', color: COLORS[9], path: '/badge' },
+            { name: 'Carousel', zhName: '走马灯', icon: 'photo-o', color: COLORS[10], path: '/carousel' },
+            { name: 'Collapse', zhName: '折叠面板', icon: 'exchange', color: COLORS[11], path: '/collapse' },
+            { name: 'Descriptions', zhName: '描述列表', icon: 'description', color: COLORS[12], path: '/descriptions' },
+            { name: 'Divider', zhName: '分割线', icon: 'minus', color: COLORS[13], path: '/divider' },
+            { name: 'Empty', zhName: '空状态', icon: 'smile', color: COLORS[14], path: '/empty' },
+            { name: 'List', zhName: '列表', icon: 'bars', color: COLORS[15], path: '/list-demo' },
+            { name: 'Pagination', zhName: '分页', icon: 'more', color: COLORS[0], path: '/pagination' },
+            { name: 'Skeleton', zhName: '骨架屏', icon: 'scan', color: COLORS[1], path: '/skeleton' },
+            { name: 'Table', zhName: '表格', icon: 'apps-o', color: COLORS[2], path: '/table' },
+            { name: 'Tag', zhName: '标签', icon: 'tag-o', color: COLORS[3], path: '/tag' },
+            { name: 'Calendar', zhName: '日历', icon: 'calendar-o', color: COLORS[5], path: '/calendar' },
           ]
         },
         {
           name: '导航组件',
           children: [
-            { name: 'Steps', icon: 'coupon-o', color: COLORS[4], path: '/steps' },
-            { name: 'Tabs', icon: 'exchange', color: COLORS[5], path: '/tabs' },
-            { name: 'Backtop', icon: 'arrow-up', color: COLORS[6], path: '/backtop', isNew: true },
-            { name: 'Dropdown', icon: 'arrow-down', color: COLORS[7], path: '/dropdown', isNew: true }
+            { name: 'Steps', zhName: '步骤条', icon: 'coupon-o', color: COLORS[4], path: '/steps' },
+            { name: 'Tabs', zhName: '标签页', icon: 'exchange', color: COLORS[5], path: '/tabs' },
+            { name: 'Backtop', zhName: '回到顶部', icon: 'arrow-up', color: COLORS[6], path: '/backtop' },
+            { name: 'Dropdown', zhName: '下拉菜单', icon: 'arrow-down', color: COLORS[7], path: '/dropdown' }
           ]
         },
         {
           name: '业务组件',
           children: [
-            { name: 'ButtonGroup', icon: 'diamond-o', color: COLORS[6], path: '/button-group' },
-            { name: 'ListPage', icon: 'todo-list-o', color: COLORS[7], path: '/list-page' },
-            { name: 'InfiniteScroll', icon: 'arrow-down', color: COLORS[8], path: '/infinite-scroll', isNew: true }
+            { name: 'ButtonGroup', zhName: '按钮组', icon: 'diamond-o', color: COLORS[6], path: '/button-group' },
+            { name: 'ListPage', zhName: '列表页', icon: 'todo-list-o', color: COLORS[7], path: '/list-page' },
+            { name: 'InfiniteScroll', zhName: '无限滚动', icon: 'arrow-down', color: COLORS[8], path: '/infinite-scroll' }
           ]
         },
         {
           name: '示例页面',
           children: [
-            { name: 'UserTable', icon: 'contact', color: COLORS[9], path: '/user-table' },
-            { name: 'UserList', icon: 'contact', color: COLORS[10], path: '/list' }
+            { name: 'UserTable', zhName: '用户表格', icon: 'contact', color: COLORS[9], path: '/user-table' },
+            { name: 'UserList', zhName: '用户列表', icon: 'contact', color: COLORS[10], path: '/list' }
           ]
         }
       ]
@@ -302,19 +301,6 @@ export default {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.home-grid-item__badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 2px 6px;
-  font-size: 10px;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #f5576c 0%, #ff6f91 100%);
-  border-radius: 6px;
-  line-height: 1.2;
 }
 
 @media (min-width: 600px) {
